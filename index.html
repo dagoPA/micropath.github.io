@@ -49,7 +49,8 @@
 
     <!-- Dark Mode Init -->
     <script>
-        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        // Dark mode by default
+        if (localStorage.theme === 'dark' || !('theme' in localStorage)) {
             document.documentElement.classList.add('dark')
         } else {
             document.documentElement.classList.remove('dark')
@@ -68,9 +69,9 @@
                 <!-- Logo -->
                 <div class="flex items-center gap-3">
                     <!-- Mobile Logo -->
-                    <img src="./img/CVPM.png" alt="CVPM" class="h-10 w-auto md:hidden object-contain">
+                    <img src="./CVPM.png" alt="CVPM" class="h-10 w-auto md:hidden object-contain">
                     <!-- Desktop Logo -->
-                    <img src="./img/CVPM_horizontal.png" alt="CVPM" class="hidden md:block h-10 w-auto object-contain">
+                    <img src="./CVPM_horizontal.png" alt="CVPM" class="hidden md:block h-10 w-auto object-contain">
                 </div>
 
                 <!-- Desktop Nav -->
@@ -512,7 +513,7 @@
             <div class="grid md:grid-cols-4 gap-12">
                 <div class="col-span-1 md:col-span-2">
                     <div class="flex items-center gap-2 mb-6">
-                        <img src="./img/CVPM.png" alt="CVPM Laboratory" class="h-8 w-auto object-contain">
+                        <img src="./CVPM.png" alt="CVPM Laboratory" class="h-8 w-auto object-contain">
                     </div>
                     <p class="mb-6 leading-relaxed max-w-sm">
                         Martinos Center for Biomedical Imaging<br />
